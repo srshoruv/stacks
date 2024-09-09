@@ -2,12 +2,13 @@
 #include <vector>
 using namespace std;
 
+template<class T>
 class Stack {
 public:
-    vector<int> vector;
+    vector<T> vector;
     
 
-    void push(int val) {
+    void push(T val) {
         vector.push_back(val);
     }
 
@@ -22,10 +23,10 @@ public:
     }
 
     int top(){
-        if (isEmpty()) {
-        cout << "the stack is empty! \n";
-        return -1;    
-    }
+    //     if (isEmpty()) {
+    //     cout << "the stack is empty! \n";
+    //     return -1;    
+    // }
 
         int lastIdx = vector.size() - 1;
         return vector[lastIdx];
@@ -51,10 +52,10 @@ public:
 };
 
 int main(){
-    Stack s;
-    s.push(3);
-    s.push(2);
-    s.push(1);
+    Stack<string> s;
+    s.push("shoruv");
+    s.push("name is ");
+    s.push("My");
     s.printStack();
 
 }
