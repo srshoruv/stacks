@@ -41,6 +41,13 @@ public:
         }
     }
 
+    void printStack(){
+        while (vector.size()!=0) {
+            cout << vector[vector.size()-1] << " ";
+            vector.pop_back();
+        }
+    }
+
 };
 
 int main(){
@@ -48,10 +55,6 @@ int main(){
     s.push(3);
     s.push(2);
     s.push(1);
-
-    while (!s.isEmpty()) {
-        cout << s.top() << " ";
-        s.pop();
-    }
+    s.printStack();
 
 }
