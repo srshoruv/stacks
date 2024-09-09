@@ -1,5 +1,6 @@
 #include <iostream>
 #include <list>
+#include <stack>
 using namespace std;
 
 template<class T>
@@ -42,10 +43,15 @@ public:
 };
 
 int main(){
-    Stack<string> s;
+    Stack<string> s1;
+    stack<string> s;
     s.push("shoruv");
     s.push("name is ");
     s.push("My");
-    s.printStack();
+    // s.printStack();
+    while (!s.empty()) {
+            cout << s.top() << " ";
+            s.pop();
+        }
 
 }
